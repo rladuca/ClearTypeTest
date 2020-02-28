@@ -1,0 +1,22 @@
+﻿<Window x:Class="ClearTypeTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClearTypeTest"
+        mc:Ignorable="d"
+        Title="ClearTypeFramework" Height="Auto" Width="Auto" >
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Font</Label>
+            <ComboBox ItemsSource="{Binding Fonts}" SelectedItem="{Binding CurrentFont}"></ComboBox>
+            <Label>Size</Label>
+            <ComboBox ItemsSource="{Binding FontSizes}" SelectedItem="{Binding CurrentFontSize}"></ComboBox>
+            <Label>RenderingMode</Label>
+            <ComboBox ItemsSource="{Binding TextRenderingModes}" SelectedItem="{Binding CurrentTextRenderingMode}"></ComboBox>
+            <Label>FormattingMode</Label>
+            <ComboBox ItemsSource="{Binding TextFormattingModes}" SelectedItem="{Binding CurrentTextFormattingMode}"></ComboBox>
+        </StackPanel>
+        <TextBox FontFamily="{Binding CurrentFont}" FontSize="{Binding CurrentFontSize}" TextOptions.TextRenderingMode="{Binding CurrentTextRenderingMode}" TextOptions.TextFormattingMode="{Binding CurrentTextFormattingMode}" Height="500"></TextBox>
+    </StackPanel>
+</Window>

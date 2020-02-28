@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ClearTypeTest": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
